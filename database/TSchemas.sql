@@ -29,3 +29,34 @@ CREATE TABLE marks (
     mark INTEGER CHECK (mark >= 0 AND mark <= 100),
     UNIQUE (register_number, subject_code, exam_id)
 );
+
+
+--RLS enabling
+ALTER TABLE students ENABLE ROW LEVEL SECURITY;
+ALTER TABLE subjects ENABLE ROW LEVEL SECURITY;
+ALTER TABLE exams ENABLE ROW LEVEL SECURITY;
+ALTER TABLE marks ENABLE ROW LEVEL SECURITY;
+
+-- Students
+CREATE POLICY "Allow all for students"
+  ON students
+  FOR ALL
+  USING (true);
+
+-- Subjects
+CREATE POLICY "Allow all for subjects"
+  ON subjects
+  FOR ALL
+  USING (true);
+
+-- Exams
+CREATE POLICY "Allow all for exams"
+  ON exams
+  FOR ALL
+  USING (true);
+
+-- Marks
+CREATE POLICY "Allow all for marks"
+  ON marks
+  FOR ALL
+  USING (true);

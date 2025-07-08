@@ -21,3 +21,9 @@ python-dotenv>=1.0.1
 
 # Optional testing
 pytest>=8.2.0
+
+sqlalchemy
+
+python-dotenv
+
+supabase
