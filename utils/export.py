@@ -20,3 +20,4 @@ def generate_pdf(df):
     output = io.BytesIO()
     pdf.output(output)
     return output.getvalue()
+ 
